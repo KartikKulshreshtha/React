@@ -19,19 +19,19 @@ export default function NavBar(props) {
                 <Link className="nav-link active" to="/about">About</Link>
               </li>
             </ul>
+            {/* <div className="d-flex">
+              <div className="bg-white rounded mx-2" onClick={()=>{props.toggleMode('white')}} style={{height: '30px', width:"30px", cursor:"pointer"}}></div>
+              <div className="bg-primary rounded mx-2" onClick={()=>{props.toggleMode('primary')}} style={{height: '30px', width:"30px", cursor:"pointer"}}></div>
+              <div className="bg-danger rounded mx-2" onClick={()=>{props.toggleMode('danger')}} style={{height: '30px', width:"30px", cursor:"pointer"}}></div>
+              <div className="bg-success rounded mx-2" onClick={()=>{props.toggleMode('success')}} style={{height: '30px', width:"30px", cursor:"pointer"}}></div>
+              <div className="bg-warning rounded mx-2" onClick={()=>{props.toggleMode('warning')}} style={{height: '30px', width:"30px", cursor:"pointer"}}></div>
+              <div className="bg-dark rounded mx-2" onClick={props.toggleMode} style={{height: '30px', width:"30px", cursor:"pointer"}}></div>
+            </div> */}
             <div class={`form-check form-switch text-${props.mode === 'light'?'dark':'light'}`}>
               <input class="form-check-input" onClick={props.toggleMode} type="checkbox" id="flexSwitchCheckDefault" />
               <label class="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode}</label>
             </div>
-            {/* <div class="d-grid gap-2 d-md-block mx-2">
-              <button id="changing1" onClick={props.toggleMode} type="button" class="btn btn-danger">Red</button>
-            </div>
-            <div class="d-grid gap-2 d-md-block mx-2">
-              <button id="changing2" onClick={props.toggleMode} class="btn btn-secondary" type="button">Grey</button>
-            </div>
-            <div class="d-grid gap-2 d-md-block mx-2">
-              <button id="changing3" onClick={props.toggleMode} class="btn btn-success" type="button">Green</button>
-            </div> */}
+            
           </div>
         </div>
       </nav>

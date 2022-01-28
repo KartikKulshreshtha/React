@@ -37,6 +37,29 @@ function App() {
       document.body.style.backgroundColor = 'white'
       showAlert("Light mode has been enabled", 'primary');
     }
+  
+    // else if(cls === 'primary'){
+    //   setMode('primary')
+    //   document.body.style.backgroundColor = 'blue'
+    // }
+    // else if(cls === 'warning'){
+    //   setMode('warning')
+    //   document.body.style.backgroundColor = 'yellow'
+    // }
+    // else if(cls === 'success'){
+    //   setMode('success')
+    //   document.body.style.backgroundColor = 'green'
+    // }
+    // else if(cls === 'danger'){
+    //   setMode('danger')
+    //   document.body.style.backgroundColor = 'red'
+    // }
+    // else{
+    //   setMode('light')
+    //   document.body.style.backgroundColor = 'white'
+    //   showAlert("Light mode has been enabled", 'primary');
+    // }
+    
   }
 
   return (
@@ -45,10 +68,12 @@ function App() {
       <NavBar title="Converters" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <Routes>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/" element={<TextForm showAlert={showAlert} heading = "Enter the text to analyze below" mode={mode}/>}/>
+          <Route path="/about" element={<About mode={mode}/>}/>
+          <Route path="/" element={<TextForm showAlert={showAlert} heading = "Enter the text to analyze below" mode={mode}/>}>
+          </Route>
       </Routes>
     </Router>
+    
     </>
   );
 }
